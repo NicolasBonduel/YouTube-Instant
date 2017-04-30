@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Youtube-Instant</title>
+    <link rel='stylesheet' href='stylesheets/style.css' />
+  </head>
+  <body>
+    <div id="app">
+        <input @input="update" id="searchInput" v-model="input"/>
+        <object id="test" :data='dataSrc'>
+        </object>
+
+        <div id="flash">
+            <span v-if="(dataSrc || input)">{{input}}</span>
+            <div v-else>
+                <div class="blink">|</div>
+            </div>
+        </div>
+    </div>
+    <script src='js/bundle.js'></script>
+    <script>
+        window.onload = function() {
+            var input = document.getElementById('searchInput');
+            input.focus();
+
+            document.onkeypress=function(e){
+                if(input !== document.activeElement)
+                    input.focus();
+            };
+        };
+    </script>
+  </body>
+</html>
