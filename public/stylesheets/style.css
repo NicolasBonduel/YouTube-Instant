@@ -51,6 +51,7 @@ object {
     animation-direction: alternate;
     animation-timing-function: linear;
 }
+
 @keyframes blink {
     from {
         opacity: 1;
@@ -58,4 +59,8 @@ object {
     to {
         opacity: 0;
     }
+}
+
+[v-cloak] {
+    display: none;
 }
