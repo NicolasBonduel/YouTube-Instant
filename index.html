@@ -6,12 +6,10 @@
   </head>
   <body>
     <div id="app">
-        <input @input="update" id="searchInput" v-model="input"/>
-        <object id="test" :data='dataSrc'>
-        </object>
-
+        <input @input="update" id="searchInput" title="searchInput" v-model="input"/>
+        <object :data='dataSrc'></object>
         <div id="flash">
-            <span v-if="(dataSrc || input)">{{input}}</span>
+            <span v-if="(dataSrc || input)" v-cloak>{{input}}</span>
             <div v-else>
                 <div class="blink">|</div>
             </div>
