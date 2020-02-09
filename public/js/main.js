@@ -2,7 +2,7 @@ const Vue = require('vue/dist/vue.min.js');
 const superagent = require('superagent');
 const debounce = require('javascript-debounce');
 
-const key = 'AIzaSyBaxYI-37aSSHY1DzBW6iDrkfQm3L8FrrI';
+const key = 'AIzaSyCvSg_gV9GlR8_Q41yDi1-nmM-q9YScq9E';
 
 new Vue({
     el: '#app',
